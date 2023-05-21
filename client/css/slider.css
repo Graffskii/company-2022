@@ -1,0 +1,81 @@
+/* Слайдер: */
+.slider{
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    height: 600px;
+}
+
+.slider .item img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+}
+.text > p{
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    background: black;
+    opacity: 0.8;
+}
+.text{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 10%;
+}
+.btn{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background: gray;
+    border: 2px solid black;
+    border-radius:10px;
+    height: 30px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.btn:hover{
+    background: white;
+    color: black;
+    font-size: 20px;
+}
+
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
